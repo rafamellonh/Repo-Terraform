@@ -7,7 +7,7 @@ resource "azurerm_virtual_network" "vnet-dev" {
 
 resource "azurerm_subnet" "sub-dev01" {
   name                 = "sub-dev01"
-  resource_group_name  = azurerm_resource_group.RG01.location
+  resource_group_name  = azurerm_resource_group.RG01.name
   virtual_network_name = azurerm_virtual_network.vnet-dev.name
   address_prefixes     = ["192.168.100.0/27"]
 }
