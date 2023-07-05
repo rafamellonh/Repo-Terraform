@@ -94,22 +94,26 @@ resource "azurerm_network_interface" "nic-VmSql" {
 
 
 resource "azurerm_windows_virtual_machine" "VmSql" {
-  name = "VmSql"
+  name                = "VmSql"
   resource_group_name = azurerm_resource_group.RG01.name
-  location = azurerm_resource_group.RG01.location
-  size = "Standard_B1s"
-  admin_username = "rafael.admin"
-  admin_password = "@#Rafa,321@#"
+  location            = azurerm_resource_group.RG01.location
+  size                = "Standard_DS1_v2"
+  admin_username      = "rafael.admin"
+  admin_password      = "@#Rafa,321@#"
 
-  network_interface_ids = [ azurerm_network_interface.nic-VmSql.id ]
+  network_interface_ids = [azurerm_network_interface.nic-VmSql.id]
 
   os_disk {
-    caching = "ReadWrite"
-    storage_account_type = "Premium"
+    caching              = "ReadWrite"
+    storage_account_type = "Premium_LRS"
   }
 
   source_image_reference {
-    
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "sql2019-ws2019"
+    version   = "latest"
   }
+
 
 }
