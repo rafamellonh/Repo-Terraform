@@ -1,4 +1,4 @@
-resource "azurerm_public_ip" "pip-bst" {
+/* resource "azurerm_public_ip" "pip-bst" {
   name                = "pip-bst"
   resource_group_name = azurerm_resource_group.RG01.name
   location            = azurerm_resource_group.RG01.location
@@ -16,4 +16,4 @@ resource "azurerm_bastion_host" "bst01" {
     subnet_id            = azurerm_subnet.AzureBastionSubnet.id
     public_ip_address_id = azurerm_public_ip.pip-bst.id
   }
-}
+}*/
