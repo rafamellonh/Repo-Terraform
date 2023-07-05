@@ -1,0 +1,23 @@
+# Arquivos de backup
+*.tfstate.backup
+
+# Arquivos de estado do Terraform
+*.tfstate
+
+# Arquivos de planos do Terraform
+*.tfplan
+
+# Diretório .terraform gerado pelo Terraform
+**/.terraform/*
+
+# Arquivos de logs
+*.log
+
+# Arquivos de backup criados pelo editor de texto
+*~
+
+# Arquivos de configuração do Visual Studio Code
+.vscode/
+
+
+*.exe
