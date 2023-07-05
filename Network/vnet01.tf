@@ -4,11 +4,11 @@ resource "azurerm_resource_group" "RG01" {
 }
 
 resource "azurerm_virtual_network" "vnet01" {
-  name          = "vnet01"
+  name                = "vnet01"
   resource_group_name = azurerm_resource_group.RG01.name
-  location      = azurerm_resource_group.RG01.location
-  address_space = ["10.50.0.0/16"]
-  dns_servers   = ["8.8.8.8", "1.1.1.1"]
+  location            = azurerm_resource_group.RG01.location
+  address_space       = ["10.50.0.0/16"]
+  dns_servers         = ["8.8.8.8", "1.1.1.1"]
 }
 
 resource "azurerm_subnet" "sub-web01" {
@@ -50,16 +50,16 @@ resource "azurerm_network_security_group" "nsg01" {
 
 
 resource "azurerm_network_security_rule" "rule-80" {
-  name                       = "rule-80"
-  priority                   = "200"
-  direction                  = "Inbound"
-  access                     = "Allow"
-  protocol                   = "Tcp"
-  source_port_range          = "*"
-  destination_port_range     = "80"
-  source_address_prefix      = "*"
-  destination_address_prefix = "*"
-  resource_group_name        = azurerm_resource_group.RG01.name
+  name                        = "rule-80"
+  priority                    = "200"
+  direction                   = "Inbound"
+  access                      = "Allow"
+  protocol                    = "Tcp"
+  source_port_range           = "*"
+  destination_port_range      = "80"
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.RG01.name
   network_security_group_name = azurerm_network_security_group.nsg01.name
 }
 
@@ -79,6 +79,6 @@ resource "azurerm_subnet_network_security_group_association" "asso-srv01" {
   network_security_group_id = azurerm_network_security_group.nsg01.id
 }
 
-  
+
 
   
