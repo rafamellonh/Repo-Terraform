@@ -1,0 +1,8 @@
+rg-name   = "RG-UPDATES"
+location  = "brazilsouth"
+vnet-name = "vnet-update"
+sub-name  = "sub-update"
+vm-2016   = "vm-2016"
+vm-2019   = "vm-2019"
+vm-2022   = "vm-2022"
+vm-ubuntu = "vm-ubuntu"

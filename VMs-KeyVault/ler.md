@@ -1,0 +1,1 @@
+https://jakewalsh.co.uk/automating-azure-key-vault-and-secrets-using-terraform/
