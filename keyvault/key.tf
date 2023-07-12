@@ -16,20 +16,20 @@ resource "azurerm_key_vault" "key01" {
   tenant_id                  = data.azurerm_client_config.current.tenant_id
   soft_delete_retention_days = 7
   purge_protection_enabled   = false
-  enabled_for_deployment = true
+  enabled_for_deployment     = true
   access_policy {
-    object_id          = data.azurerm_client_config.current.object_id
-    tenant_id          = data.azurerm_client_config.current.tenant_id
+    object_id = data.azurerm_client_config.current.object_id
+    tenant_id = data.azurerm_client_config.current.tenant_id
     secret_permissions = [
-      "Get","List","Set"
+      "Get", "List", "Set"
     ]
   }
 
 }
 
 resource "azurerm_key_vault_secret" "senhaVms" {
-    key_vault_id = azurerm_key_vault.key01.id
-    name = "rafaeladmin"
-    value = "@#Rafa,321@#"
-    
+  key_vault_id = azurerm_key_vault.key01.id
+  name         = "rafaeladmin"
+  value        = "@#Rafa,321@#"
+
 }

@@ -4,7 +4,7 @@ resource "azurerm_windows_virtual_machine" "vm2019" {
   admin_username        = azurerm_key_vault_secret.senhaVms.name
   location              = var.location
   name                  = var.vm-2019
-  network_interface_ids = [azurerm_network_interface.nic2010.id]
+  network_interface_ids = [azurerm_network_interface.nic2019.id]
   resource_group_name   = var.rg-name
   size                  = "Standard_DS1_v2"
   os_disk {
