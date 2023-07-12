@@ -21,7 +21,7 @@ resource "azurerm_windows_virtual_machine" "vm2019" {
 
 }
 
-resource "azurerm_network_interface" "nic2010" {
+resource "azurerm_network_interface" "nic2019" {
   location            = var.location
   name                = "${var.vm-2019}-NIC"
   resource_group_name = var.rg-name
