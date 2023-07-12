@@ -18,22 +18,12 @@ variable "sub-name" {
   type        = string
 }
 
-variable "vm-2016" {
-  description = "vm 2016"
-  type        = string
-}
-
 variable "vm-2019" {
   description = "vm 2019"
   type        = string
 }
 
-variable "vm-2022" {
-  description = "vm 2022"
-  type        = string
-}
-
-variable "vm-ubuntu" {
-  description = "vm ubuntu"
-  type        = string
+variable "keyVault-name" {
+  description = "Nome do keyVault"
+  type = string
 }

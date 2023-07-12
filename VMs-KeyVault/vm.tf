@@ -23,21 +23,21 @@ resource "azurerm_windows_virtual_machine" "vm2019" {
 
 resource "azurerm_network_interface" "nic2010" {
   location            = var.location
-  name                = "vm-2019"
+  name                = "${var.vm-2019}-NIC"
   resource_group_name = var.rg-name
   ip_configuration {
     name                          = "internal"
     private_ip_address_allocation = "Dynamic"
     subnet_id                     = azurerm_subnet.subnet.id
-    public_ip_address_id          = azurerm_public_ip.pip2010.id
+    public_ip_address_id          = azurerm_public_ip.pip2019.id
   }
 
 }
 
-resource "azurerm_public_ip" "pip2010" {
+resource "azurerm_public_ip" "pip2019" {
   allocation_method   = "Dynamic"
   location            = var.location
-  name                = "pip2019"
+  name                = "${var.vm-2019}-PIP"
   resource_group_name = var.rg-name
 
 }

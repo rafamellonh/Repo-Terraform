@@ -5,7 +5,7 @@ data "azurerm_client_config" "current" {
 
 resource "azurerm_key_vault" "key01" {
   location                   = var.location
-  name                       = "key01mello0301"
+  name                       = var.keyVault-name
   resource_group_name        = var.rg-name
   sku_name                   = "standard"
   tenant_id                  = data.azurerm_client_config.current.tenant_id
