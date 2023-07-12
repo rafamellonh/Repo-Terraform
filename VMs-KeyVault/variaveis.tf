@@ -27,3 +27,8 @@ variable "keyVault-name" {
   description = "Nome do keyVault"
   type = string
 }
+
+variable "nsg-name" {
+ description = "Nome NSG"
+ type = string
+}
