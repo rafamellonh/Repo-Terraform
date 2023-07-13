@@ -28,22 +28,4 @@ resource "azurerm_network_interface" "nic-front" {
     private_ip_address_allocation = "Dynamic"
     subnet_id                     = azurerm_subnet.sub-front.id
   }
-
-}
-
-provisioner "remote-exec" {
-
-inline = [
-#Script VM-WEB
-# Instalar IIS com Management Tools
-"Add-WindowsFeature Web-Server -IncludeManagementTools",
-
-# Remover a pagina iisstart 
-"remove-item C:\\inetpub\\wwwroot\\iisstart.htm",
-
-# Configurar as paginas Default
-"Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value \"SITE -- $($env:computername)\""
-
-]
-
 }
