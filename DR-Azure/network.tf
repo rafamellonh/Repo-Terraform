@@ -12,7 +12,7 @@ resource "azurerm_subnet" "sub-front" {
   address_prefixes     = ["10.0.1.0/24"]
   name                 = var.sub-front
   resource_group_name  = azurerm_resource_group.RG-PRD.name
-  virtual_network_name = var.vnet-front
+  virtual_network_name = azurerm_virtual_network.vnet-front.name
 }
 
 resource "azurerm_network_security_group" "nsg-front" {

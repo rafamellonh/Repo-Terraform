@@ -2,9 +2,9 @@ data "azurerm_client_config" "current" {
 
 }
 
-resource "azurerm_key_vault" "keyvaultpasswordmello01" {
+resource "azurerm_key_vault" "keyvaultpasswordmello011" {
   location                   = var.location-prd
-  name                       = "keyvaultpasswordmello01"
+  name                       = "keyvaultpasswordmello011"
   resource_group_name        = azurerm_resource_group.RG-PRD.name
   sku_name                   = "standard"
   tenant_id                  = data.azurerm_client_config.current.tenant_id
@@ -20,7 +20,7 @@ resource "azurerm_key_vault" "keyvaultpasswordmello01" {
 }
 
 resource "azurerm_key_vault_secret" "rafaeladmin" {
-  key_vault_id = azurerm_key_vault.keyvaultpasswordmello01.id
+  key_vault_id = azurerm_key_vault.keyvaultpasswordmello011.id
   name         = "rafaeladmin"
   value        = "@#Rafa,321@#"
 
