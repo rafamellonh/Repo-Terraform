@@ -58,6 +58,6 @@ variable "sub-DC" {
 }
 
 variable "nsg-front" {
-description = "NSG do Front"
-type = string
+  description = "NSG do Front"
+  type        = string
 }
