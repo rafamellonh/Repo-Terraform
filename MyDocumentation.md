@@ -8,3 +8,7 @@
   * prevent_destroy : previne uma destuição acidental.
   * ignore_changes : permite ignorar alterações no apply, util para deixar recursos imutáveis
   * replace_triggered_by : especifica explicidamente quais mudanças devem acionar a substituição de um recurso.
+
+* ```provisioner ``` : é um bloco que permite executar configurações personalizadas antes ou depois da criação, atualização ou destruição de recursos de ingra
+  * local-exec : executa comandos ou scritps diretamente na máquina onde o terraform está sendo executado
+  * remote-exec : executa comandos ou scripts em uma máquina remota após a criação ou atualização de um recurso 
