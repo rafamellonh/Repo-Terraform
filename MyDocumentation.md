@@ -14,12 +14,12 @@
   * remote-exec : executa comandos ou scripts em uma máquina remota após a criação ou atualização de um recurso 
 
 * ```Sensitive ``` : Serve para proteger dados sensiveis na interface do terraform, não irá expor senhas por exemplo
-  * ```
-
-  variable "db_password" {
+   
+  ```
+variable "db_password" {
   description = "Database administrator password"
   type        = string
   sensitive   = true
 }
-  
+
   ```
