@@ -13,7 +13,7 @@
   * local-exec : executa comandos ou scritps diretamente na máquina onde o terraform está sendo executado
   * remote-exec : executa comandos ou scripts em uma máquina remota após a criação ou atualização de um recurso 
 
-* ```Sensitive `` : Serve para proteger dados sensiveis na interface do terraform, não irá expor senhas por exemplo
+* ```Sensitive ``` : Serve para proteger dados sensiveis na interface do terraform, não irá expor senhas por exemplo
   * ```
 
   variable "db_password" {
