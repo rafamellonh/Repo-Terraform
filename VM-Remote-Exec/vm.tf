@@ -46,7 +46,7 @@ resource "azurerm_public_ip" "pip-vm" {
 resource "null_resource" "install-iis" {
 
   provisioner "remote-exec" {
-    inline = ["New-Item -Type File -Name 'teste01.txt' -Path 'd:' "
+    inline = ["add-windowsfeature -name web-server "
     ]
 
   }
